@@ -33,7 +33,7 @@ export async function POST(request: NextRequest) {
     // Use findByIdAndUpdate to update the specific field
     const updatedDonar = await DonarList.findByIdAndUpdate(
       id,
-      { $set: { fieldNameToUpdate: updatedField } },
+      { $set: updatedField },
       { new: true } // Return the updated document
     );
 
