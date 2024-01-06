@@ -4,7 +4,7 @@ import DonarList from "@/models/donarModel";
 
 connectDB();
 
-export async function UPDATE(request: NextRequest) {
+export async function POST(request: NextRequest) {
   try {
     const { id, updatedField } = await request.json();
 
