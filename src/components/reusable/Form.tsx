@@ -97,7 +97,7 @@ const Form = ({formTitle,btnTxt,formType,btnType}:IForm) => {
               toast.success('User Registered Successfully')
               // router.push('/login')
               setTimeout(() => {
-                window.location.replace('/login');
+                window !== undefined && window.location.replace('/login');
               }, 1000);
             }else if(RegisterUserInfo.message==='Admin already exists'){
               toast.error("Admin already exists")

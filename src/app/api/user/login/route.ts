@@ -63,6 +63,7 @@ export async function POST(request: NextRequest) {
       {status: 200});
 
       response.cookies.set("token", token, {
+        secure: process.env.NODE_ENV === "production",
         httpOnly: true,
     })
     return response;

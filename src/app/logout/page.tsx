@@ -14,7 +14,7 @@ const Logout = () => {
         if(user===null){
             toast.success('Logged out')
             setTimeout(() => {
-                window.location.replace('/login');
+                window !== undefined && window.location.replace('/login');
               }, 1000);
         }
       },[user]);

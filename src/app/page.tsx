@@ -11,6 +11,7 @@ import AdminHome from "@/components/admin/AdminHome";
 
 const Home = () => {
   const {user}=useAppSelector(selectAuth)
+  console.log(user);
   return (
    <>
        <div className="home min-h-full">

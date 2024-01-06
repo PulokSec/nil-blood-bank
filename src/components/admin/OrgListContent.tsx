@@ -54,12 +54,12 @@ const OrgListContent = () => {
               const data = await response.json();
               toast.success(data.message)
               setLoading(false);
-              window.location.reload()
+              window !== undefined && window.location.reload()
               
     
         } catch (error) {
             console.log('Error:', error);
-            window.location.reload() 
+            window !== undefined && window.location.reload() 
             setLoading(false); 
         }
     };
