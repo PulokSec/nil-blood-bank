@@ -6,7 +6,7 @@ import { selectAuth } from '@/redux/features/auth/authSlice';
 
 const SidebarMenu = () => {
   const { user } = useAppSelector(selectAuth);
-  const isClient = typeof window !== undefined && window !== 'undefined'; // Check if code is running on the client-side
+  const isClient = typeof window !== 'undefined'; // Check if code is running on the client-side
   const [activeItem, setActiveItem] = useState<string | null>(
     isClient ? localStorage.getItem('activeItem') || null : null
   );
