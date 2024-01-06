@@ -30,7 +30,7 @@ const InputType = ({labelTxt,inputType,id,name,value,onChange,checked}:IInputTyp
                         name={name}
                         value={value}
                         onChange={onChange}
-                        className="w-full px-2 py-1 border rounded-md focus:outline-none focus:border-pink-500"
+                        className="w-full px-2 py-1 border rounded-md  focus:border-red-500 text-black bg-white placeholder:text-black placeholder:bg-white dark:placeholder:text-black dark:placeholder:bg-white"
                     />
                 </>
             )

@@ -370,7 +370,7 @@ const DonarListContent = () => {
                     {isEditing && editingItemId === item._id ? (
                       <input
                         type="text"
-                        className="border rounded p-1 w-full"
+                        className="border rounded p-1 w-full focus:border-red-500 text-black bg-white"
                         value={newName}
                         onChange={(e) => setNewName(e.target.value)}
                       />
@@ -381,7 +381,7 @@ const DonarListContent = () => {
                   <td className="p-3 text-xs md:text-sm">
                     {isEditing && editingItemId === item._id ? (
                       <input
-                        className="border rounded p-1 w-full"
+                        className="border rounded p-1 w-full focus:border-red-500 text-black bg-white"
                         type="text"
                         value={newBloodGroup}
                         onChange={(e) => setNewBloodGroup(e.target.value)}
@@ -393,7 +393,7 @@ const DonarListContent = () => {
                   <td className="p-3 text-xs md:text-sm">
                     {isEditing && editingItemId === item._id ? (
                       <input
-                        className="border rounded p-1 w-full"
+                        className="border rounded p-1 w-full focus:border-red-500 text-black bg-white"
                         type="text"
                         value={newAddress}
                         onChange={(e) => setNewAddress(e.target.value)}
@@ -406,7 +406,7 @@ const DonarListContent = () => {
                     {isEditing && editingItemId === item._id ? (
                       // You might want to disable editing for phone number
                       <input
-                        className="border rounded p-1 w-full"
+                        className="border rounded p-1 w-full focus:border-red-500 text-black bg-white"
                         type="text"
                         value={newPhone}
                         onChange={(e) => setNewPhone(e.target.value)}
@@ -420,7 +420,7 @@ const DonarListContent = () => {
                   <td className="p-3 text-xs md:text-sm">
                     {isEditing && editingItemId === item._id ? (
                       <input
-                        className="border rounded p-1 w-full"
+                        className="border rounded p-1 w-full focus:border-red-500 text-black bg-white"
                         type="text"
                         value={newLastDonated}
                         onChange={(e) => setNewLastDonated(e.target.value)}
@@ -432,7 +432,7 @@ const DonarListContent = () => {
                   <td className="p-3 text-xs md:text-sm">
                     {isEditing && editingItemId === item._id ? (
                       <input
-                        className="border rounded p-1 w-full"
+                        className="border rounded p-1 w-full focus:border-red-500 text-black bg-white"
                         type="text"
                         value={newWeight}
                         onChange={(e) => setNewWeight(e.target.value)}
@@ -444,7 +444,7 @@ const DonarListContent = () => {
                   <td className="p-3 text-xs md:text-sm">
                     {isEditing && editingItemId === item._id ? (
                       <input
-                        className="border rounded p-1 w-full"
+                        className="border rounded p-1 w-full focus:border-red-500 text-black bg-white"
                         type="text"
                         value={newVaccinated}
                         onChange={(e) => setNewVaccinated(e.target.value)}
