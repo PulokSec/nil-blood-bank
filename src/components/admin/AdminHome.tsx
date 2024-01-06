@@ -1,8 +1,20 @@
-import React from 'react'
+'use client';
+import React, { useEffect } from 'react'
 import { GrMenu } from 'react-icons/gr'
 import BottomNavigationBar from '../reusable/BottomNavigationBar'
+import { useAppSelector } from '@/redux/hooks';
+import { useRouter } from 'next/navigation';
+import { selectAuth } from '@/redux/features/auth/authSlice';
 
 const AdminHome = () => {
+  const { user } = useAppSelector(selectAuth);
+  const router = useRouter();
+
+  useEffect(() => {
+    if(!user){
+router.push('/init');
+    }
+  }, [user])
   return (
     <div className="drawer-content ">
         {/* <label htmlFor="my-drawer-2" className="btn btn-ghost drawer-button top-1 lg:hidden"><GrMenu/></label> */}

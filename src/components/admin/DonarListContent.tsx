@@ -7,6 +7,9 @@ import { useFormik } from "formik";
 import PreLoder from "../reusable/Preloder";
 import InputType from "../reusable/InputType";
 import BottomNavigationBar from "../reusable/BottomNavigationBar";
+import { useAppSelector } from "@/redux/hooks";
+import { selectAuth } from "@/redux/features/auth/authSlice";
+import { useRouter } from "next/navigation";
 interface IDonarListForm {
   name: string;
   address: string;
@@ -33,6 +36,16 @@ const DonarListContent = () => {
   const [newWeight, setNewWeight] = useState("");
   const [newVaccinated, setNewVaccinated] = useState("");
   const [editingItemId, setEditingItemId] = useState(null);
+  const { user } = useAppSelector(selectAuth);
+  console.log(user);
+  const router = useRouter();
+
+  useEffect(() => {
+    if(!user){
+router.push('/login');
+    }
+  }, [user])
+  
 
   const [isEditing, setIsEditing] = useState(false);
   const bloodGroups = ["A+", "B+", "AB+", "O+", "A-", "B-", "AB-", "O-"];
@@ -152,6 +165,7 @@ const DonarListContent = () => {
         setSearchOpen(false);
         return;
       }
+      getDonarRecord();
       const data = await response.json();
       setIsEditing(false);
       setEditingItemId(null);
@@ -178,6 +192,7 @@ const DonarListContent = () => {
         setLoading(false);
         return;
       }
+      getDonarRecord();
       const data = await response.json();
       toast.success(data.message);
       setLoading(false);
