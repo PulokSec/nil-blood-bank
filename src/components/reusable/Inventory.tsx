@@ -72,13 +72,13 @@ const {values,handleChange,handleSubmit,errors,touched} = useFormik({
                  toast.error(data.error)
                  setIsLoading(false)
                  setTimeout(() => {
-                     window !== undefined && window.location.reload()
+                     typeof window !== 'undefined' && window.location.reload()
                    }, 1000);
              }else if(data.success===true){
                  toast.success(data.message)
                  setIsLoading(false)
                  setTimeout(() => {
-                     window !== undefined && window.location.reload()
+                     typeof window !== 'undefined' && window.location.reload()
                    }, 1000);
              }
          })
@@ -91,7 +91,7 @@ const {values,handleChange,handleSubmit,errors,touched} = useFormik({
         }catch(error:any){
             toast.error(error.response.data.message)
             setTimeout(() => {
-                window !== undefined && window.location.reload()
+                typeof window !== 'undefined' && window.location.reload()
               }, 1000);
 
         }

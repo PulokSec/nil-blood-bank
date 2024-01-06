@@ -157,7 +157,7 @@ const DonarListContent = () => {
       setEditingItemId(null);
       toast.success(data.message);
       setLoading(false);
-      window !== undefined && window.location.reload();
+      typeof window !== 'undefined' && window.location.reload();
     } catch (error) {
       console.log("Error:", error);
       setLoading(false);
@@ -181,7 +181,7 @@ const DonarListContent = () => {
       const data = await response.json();
       toast.success(data.message);
       setLoading(false);
-      window !== undefined && window.location.reload();
+      typeof window !== 'undefined' && window.location.reload();
     } catch (error) {
       console.log("Error:", error);
       setLoading(false);
@@ -234,13 +234,13 @@ const DonarListContent = () => {
                 toast.error(data.error);
                 setIsLoading(false);
                 setTimeout(() => {
-                  window !== undefined && window.location.reload();
+                  typeof window !== 'undefined' && window.location.reload();
                 }, 1000);
               } else if (data.success === true) {
                 toast.success(data.message);
                 setIsLoading(false);
                 setTimeout(() => {
-                  window !== undefined && window.location.reload();
+                  typeof window !== 'undefined' && window.location.reload();
                 }, 1000);
               }
             });
@@ -250,7 +250,7 @@ const DonarListContent = () => {
       } catch (error: any) {
         toast.error(error.response.data.message);
         setTimeout(() => {
-          window !== undefined && window.location.reload();
+          typeof window !== 'undefined' && window.location.reload();
         }, 1000);
       }
     },

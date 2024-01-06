@@ -60,7 +60,7 @@ const HospitalListContent = () => {
               const data = await response.json();
               toast.success(data.message)
               setLoading(false);
-              window !== undefined && window.location.reload()
+              typeof window !== 'undefined' && window.location.reload()
     
         } catch (error) {
             console.log('Error:', error);
