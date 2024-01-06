@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+/* custom-scrollbar.css */
+
+/* Track */
+::-webkit-scrollbar {
+  width: 3px;
+  height: 1px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:red; /* Change this to your desired color */
+  border-radius: 6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #3579b0; /* Change this to your desired hover color */
+}
+
